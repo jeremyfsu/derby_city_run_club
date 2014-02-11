@@ -131,4 +131,12 @@ a:link, a:visited {
   text-decoration:none;
   color: #000;
 }
-
+input {
+  height: 100px;
+  width: 600px;
+  font-size: 80px;
+}
+label {
+  font-size: 80px;
+  font-weight: bold;
+}
