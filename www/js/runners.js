@@ -10,7 +10,8 @@ var Runners = {
       };
 
       Runners.add(entry);
-    },
+    }, true);
+  },
 
   add: function(runner) {
     window.localStorage.setItem("Runners:" + runner.telephone, JSON.stringify(runner));
