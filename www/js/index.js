@@ -27,6 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.getElementById("sign_in_button").addEventListener('onclick', this.sign_up, false);
     },
     // deviceready Event Handler
     //
@@ -45,5 +46,11 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+   
+    sign_up: function() {
+      window.location = 'sign_in.html';
     }
+
 };
+
