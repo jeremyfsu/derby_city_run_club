@@ -11,20 +11,13 @@ var Runners = {
     return JSON.parse(window.localStorage.getItem("Runners:" + telephone));
   },
 
-  sign_in: function(telephone) {
-    runner = this.get(telephone);
+  sign_in: function(runner) {
     runner.run_count = runner.run_count + 1;
     this.save(runner);
     return runner;
-  },
-
-  query_string: function(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-    results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
 };
 Runners.init();
+
 
