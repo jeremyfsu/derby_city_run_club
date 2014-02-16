@@ -31,14 +31,14 @@
           <table>
             <tr>
               <td>
-                <form id='sign-in-form'>
+                <form id='sign_in_form'>
                   <input type='number' id='telephone_number'>
                 </form>
               </td>
             </tr>
             <tr>
               <td>
-                <a href="#" id='sign_in_button'>
+                <a href='#' id='sign_in_button'>
                   <div class="button">
                     Sign In
                   </div>
@@ -56,10 +56,11 @@
             </tr>
           </table>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            app.initialize();
+          app.initialize();
+          sign_in.init();
         </script>
       </body>
 </html>

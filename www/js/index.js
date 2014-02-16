@@ -27,7 +27,6 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.getElementById("sign_in_button").addEventListener('onclick', this.sign_up, false);
     },
     // deviceready Event Handler
     //
@@ -46,11 +45,17 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    },
-   
-    sign_up: function() {
-      window.location = 'sign_in.html';
     }
+   
+};
 
+var sign_in = {
+  init: function() {
+    var button = document.getElementById('sign_in_button');
+    button.onclick = function(event) {
+      var sign_in_form = document.getElementById('sign_in_form');
+      window.location = 'sign_in.html?telephone='+sign_in_form.telephone_number.value;
+    };
+  }
 };
 
