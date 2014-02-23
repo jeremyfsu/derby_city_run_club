@@ -1,6 +1,4 @@
 var SignIn = {
-  $result: document.getElementById("result"),
-
   query_string: function(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -9,13 +7,15 @@ var SignIn = {
   },
 
   init: function() {
-    runner = Runners.get(query_string('telephone'));
+    var result_div = document.getElementById("result");
+    var telephone = this.query_string('telephone');
+    runner = Runners.get(telephone);
     if (runner != null) {
       Runners.sign_in(runner);
-      /* Display message "you've run x times!" */
+      result_div.innerHTML = 'Welcome ' + runner.first_name + '!<br>This is run # ' + runner.run_count + ' for you!';
     }
     else {
-     $result.innerHTML = 'Telephone number not found!'; 
+     result_div.innerHTML = 'Telephone ' + telephone + ' not found!'; 
     }
   }
 
