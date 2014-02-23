@@ -1,6 +1,6 @@
 var Register = {
   $form: document.getElementById("runners-form"),
-
+  
   init: function() {
     Register.$form.reset();
     Register.$form.addEventListener("submit", function(event) {
@@ -13,7 +13,8 @@ var Register = {
 
       Runners.save(runner);
       window.location = 'sign_in.html?telephone='+this.telephone_number.value;
-    }, true);
+      event.preventDefault();
+    }, false);
 
   },
 
