@@ -12,6 +12,7 @@ var Register = {
       };
 
       Runners.save(runner);
+      window.location = 'sign_in.html?telephone='+this.telephone_number.value;
     }, true);
 
   },

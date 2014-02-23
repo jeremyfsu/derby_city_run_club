@@ -37,7 +37,7 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size:60px;
     height:100%;
     margin:0px;
     padding:0px;
@@ -139,4 +139,9 @@ input {
 label {
   font-size: 80px;
   font-weight: bold;
+}
+#result {
+  font-size: 80px;
+  font-weight: bold;
+  text-align:center;
 }
