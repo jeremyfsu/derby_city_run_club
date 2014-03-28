@@ -1,6 +1,6 @@
 var Sync = {
   init: function() {
-    /* dump to csv file */
+    var blob = new Blob([Runners.toCSV()], {type: "text/csv"});
     /* upload to google docs */
   }
-}
+};
