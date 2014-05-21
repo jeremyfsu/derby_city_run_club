@@ -5,10 +5,32 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="css/index.css" / >
-    <title>Hello World</title>
+    <title>Settings</title>
   </head>
   <body>
-    Settings Screen
+    <div class="app">
+      <form id='settings-form'>
+        <table>
+          <tr>
+            <td>
+              <label>Sync Key:</label><br/>
+              <input type='text' id='key'>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Sync Secret:</label><br/>
+              <input type='text' id='secret'>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type='submit' value='SAVE'>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>  
   </body>
-  <script type="text/javascript" src="js/runners.js"></script>
+  <script type="text/javascript" src="js/settings.js"></script>
 </html>

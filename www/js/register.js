@@ -10,9 +10,11 @@ var Register = {
         last_name: this.last_name.value,
         telephone: this.telephone_number.value
       };
-
-      Runners.save(runner);
-      window.location = 'sign_in.html?telephone='+this.telephone_number.value;
+      
+      spinner.style.visibility="visible";
+      Runners.save(runner, function(){
+        window.location = 'sign_in.html?telephone='+this.telephone_number.value;
+      });
       event.preventDefault();
     }, false);
 

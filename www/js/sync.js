@@ -12,4 +12,6 @@ var Sync = {
     client.send(blob);
 
   }
+
+
 };
